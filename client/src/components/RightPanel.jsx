@@ -126,9 +126,10 @@ const RightPanel = () => {
           >
             {loading ? "Translating..." : "Translate"}
           </button>
-        </div>
+          
+        </div>    
       </div>
-
+      
       {/* Output Box */}
       <div className="w-[95%] h-1/2 p-4 flex flex-col justify-between bg-white border border-green-400 rounded mt-4 overflow-y-auto relative">
         <p className="text-black text-left min-h-[80px]">
