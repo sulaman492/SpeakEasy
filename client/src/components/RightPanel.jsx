@@ -42,16 +42,22 @@ const RightPanel = () => {
 
         {/* Language selector + Translate button */}
         <div className="flex justify-between mt-4 gap-2">
-          <select className="text-black rounded bg-green-200 p-2 w-1/2"
+          <select className="text-black rounded bg-green-200 p-2 w-1/2 cursor-pointer"
             value={sourceLang}
             onChange={(e)=>setSourceLang(e.target.value)}
           >
-            <option value="en">English</option>
-            <option value="ur">Urdu</option>
-            <option value="zh">Chinese</option>
-          </select>
+          <option value="en">English (EN)</option>
+          <option value="ur">Urdu (UR)</option>
+          <option value="zh">Chinese (ZH)</option>
+          <option value="fr">French (FR)</option>
+          <option value="de">German (DE)</option>
+          <option value="es">Spanish (ES)</option>
+          <option value="ar">Arabic (AR)</option>
+          <option value="hi">Hindi (HI)</option>
+          <option value="ja">Japanese (JA)</option>
+                  </select>
 
-          <button className="text-black px-4 py-2 rounded bg-green-200 hover:bg-green-300 w-1/2"
+          <button className="text-black px-4 py-2 rounded bg-green-200 hover:bg-green-300 w-1/2 cursor-pointer"
           onClick={handleTranslate}
           disabled={loading}>
             {loading?"Translating...":"Translate"}
@@ -66,13 +72,19 @@ const RightPanel = () => {
           {translatedText===""?"Translation output will show here...":translatedText}
         </p>
         <div>
-            <select className="text-black rounded bg-green-200 p-2 w-1/2"
+            <select className="text-black rounded bg-green-200 p-2 w-1/2 cursor-pointer"
             value={targetLang}
             onChange={(e)=>setTargetLang(e.target.value)}
           >
-            <option value="en">English</option>
-            <option value="ur">Urdu</option>
-            <option value="zh">Chinese</option>
+          <option value="en">English (EN)</option>
+            <option value="ur">Urdu (UR)</option>
+            <option value="zh">Chinese (ZH)</option>
+            <option value="fr">French (FR)</option>
+            <option value="de">German (DE)</option>
+            <option value="es">Spanish (ES)</option>
+            <option value="ar">Arabic (AR)</option>
+            <option value="hi">Hindi (HI)</option>
+            <option value="ja">Japanese (JA)</option>
           </select>
 
         </div>
